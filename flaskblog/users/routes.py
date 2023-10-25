@@ -19,7 +19,7 @@ def register_page():
         db.session.add(user)
         db.session.commit()
         flash(f'Your account has been created!', 'success')
-        return redirect(url_for('login_page'))
+        return redirect(url_for('users.login_page'))
     return render_template('register.html', title='Sign Up', form=form)
 
 
