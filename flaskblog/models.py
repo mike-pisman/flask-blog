@@ -2,7 +2,7 @@ from flaskblog import db, login_manager
 from datetime import datetime
 from flask import current_app
 from flask_login import UserMixin
-from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from itsdangerous import URLSafeTimedSerializer as Serializer
 
 
 @login_manager.user_loader
@@ -27,7 +27,7 @@ class User(db.Model, UserMixin):
         s = Serializer(current_app.config['SECRET_KEY'])
         try:
             user_id = s.loads(token)['user_id']
-        except:
+        except Exception:
             return None
         return User.query.get(user_id)
 
