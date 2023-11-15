@@ -2,9 +2,9 @@
 
 ## Summary
 
-This is a simple blog application written in Python using the Flask framework. This project was created for learning purposes. It's deployed using Gunicorn and Nginx on Kubernetes cluster.
+This is a simple blog application written in Python using the Flask framework. This project was created for learning purposes. It's deployed using Gunicorn and Postrgresql on Kubernetes cluster.
 
-Check out the [Demo](Link)!
+Check out the [Demo](https://flask-blog.mpisman.app)!
 
 ## Features
 
